@@ -204,8 +204,16 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4288335847994348, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 670398469}
   m_SourcePrefab: {fileID: 100100000, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+--- !u!4 &670398469 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+  m_PrefabInstance: {fileID: 1195270356}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +392,74 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1135299498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4288335847994348, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+  m_PrefabInstance: {fileID: 248032297}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1195270356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1135299498}
+    m_Modifications:
+    - target: {fileID: 1818862615668106, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_Name
+      value: Remington_prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818862615668106, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.176
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.177
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.50008726
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.49991274
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50008726
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.49991274
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446497226374446, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: cfe0f6fde0ced0448b80b48dda6f6d27, type: 3}
 --- !u!1 &1742981955
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,8 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5681f6e737ee04e9801e59d79886a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 10
-  height: 10
+  width: 50
+  height: 50
   size: 1
   wallPrefab: {fileID: 7561012438490795240, guid: 55875b1f6f562974c843c7dfffeae8a0, type: 3}
   floorPrefab: {fileID: 3167397814328875689, guid: d59b920efeaa9b5478187aa07f10a9bb, type: 3}
