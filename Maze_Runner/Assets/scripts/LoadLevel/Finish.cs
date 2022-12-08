@@ -9,14 +9,13 @@ public class Finish : MonoBehaviour
     
     void Start()
     {
-        //playerCamera = GameObject.Find("Player Camera");
+
     }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            // Destroy(gameObject);
              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
