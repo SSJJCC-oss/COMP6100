@@ -18,7 +18,7 @@ public class MazeGenerator : MonoBehaviour
         surface.BuildNavMesh();
         Vector3 pos = new Vector3(29.25f, -1, 29.42f);
         Instantiate(enemy, pos, Quaternion.identity);
-
+        //instantiate player
     }
 
     private void Update()
