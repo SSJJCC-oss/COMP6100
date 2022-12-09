@@ -7,19 +7,20 @@ public class HealthBarScript : MonoBehaviour
 {
     private Image HealthBar;
     public float CurrentHealth;
-    private float MaxHealth = 100f;
-    PlayerHealth player;
+    private float MaxHealth = 2000f;
+    GameObject player;
 
     private void Start()
     {
+        player = GameObject.Find("MazeGenerator");
         //find image
         HealthBar = GetComponent<Image>();
-        player = FindObjectOfType<PlayerHealth>();
+        GetComponent<PlayerHealth>();
     }
 
     private void update()
     {
-        CurrentHealth = player.health;
+        CurrentHealth = player.GetComponent<PlayerHealth>();
         HealthBar.fillAmount = CurrentHealth / MaxHealth;
     }
 }
