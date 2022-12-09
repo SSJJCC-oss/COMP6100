@@ -5707,22 +5707,14 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-<<<<<<< HEAD
   m_Size: {x: 2, y: 3, z: 2}
   m_Center: {x: 0, y: 1.5, z: 0}
-=======
-  m_Size: {x: 1.4, y: 3, z: 2.6}
-  m_Center: {x: 0, y: 1.2, z: 0}
->>>>>>> 1e4360ad992b8991f4b86cffdcdcc5318066724e
 --- !u!1001 &669723994
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-<<<<<<< HEAD
     serializedVersion: 2
-=======
->>>>>>> 1e4360ad992b8991f4b86cffdcdcc5318066724e
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7682301611857602588, guid: d5abe6223f5536245b4678281c51df87, type: 3}
@@ -5774,10 +5766,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-<<<<<<< HEAD
     m_AddedGameObjects: []
-=======
->>>>>>> 1e4360ad992b8991f4b86cffdcdcc5318066724e
   m_SourcePrefab: {fileID: 100100000, guid: d5abe6223f5536245b4678281c51df87, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -11312,11 +11301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalPosition.y
-<<<<<<< HEAD
       value: 2.6
-=======
-      value: 1.5
->>>>>>> 1e4360ad992b8991f4b86cffdcdcc5318066724e
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30745,19 +30730,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-<<<<<<< HEAD
     serializedVersion: 2
-=======
->>>>>>> 1e4360ad992b8991f4b86cffdcdcc5318066724e
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5213313104972991281, guid: 64de6121545d64b40a911a9696eccdee, type: 3}
       propertyPath: m_StoppingDistance
-<<<<<<< HEAD
       value: 2.5
-=======
-      value: 4
->>>>>>> 1e4360ad992b8991f4b86cffdcdcc5318066724e
       objectReference: {fileID: 0}
     - target: {fileID: 5213313104972991282, guid: 64de6121545d64b40a911a9696eccdee, type: 3}
       propertyPath: m_RootOrder
@@ -30808,8 +30786,5 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-<<<<<<< HEAD
     m_AddedGameObjects: []
-=======
->>>>>>> 1e4360ad992b8991f4b86cffdcdcc5318066724e
   m_SourcePrefab: {fileID: 100100000, guid: 64de6121545d64b40a911a9696eccdee, type: 3}
