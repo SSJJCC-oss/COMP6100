@@ -19,4 +19,9 @@ public class PlayerHealth : MonoBehaviour
    void Die () {
         SceneManager.LoadScene(4);
    }
+
+    public float GetHealth()
+    {
+        return health;
+    }
 }

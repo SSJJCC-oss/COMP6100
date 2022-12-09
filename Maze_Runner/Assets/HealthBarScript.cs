@@ -20,7 +20,7 @@ public class HealthBarScript : MonoBehaviour
 
     private void update()
     {
-        CurrentHealth = player.GetComponent<PlayerHealth>();
+        CurrentHealth = player.GetComponent<PlayerHealth>().GetHealth();
         HealthBar.fillAmount = CurrentHealth / MaxHealth;
     }
 }
