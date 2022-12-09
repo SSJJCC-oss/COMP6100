@@ -42,11 +42,7 @@ public class EnemyController : MonoBehaviour
             else {
                 animator.SetBool("Attack", false);
             }
-        } else {
-            Debug.Log("Dead");
-        }
-
-            
+        }             
     }
 
     void FaceTarget()
