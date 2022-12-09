@@ -3,8 +3,14 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
    public float health = 50f;
-   
-   public void TakeDamage (float amount)
+   private GameObject maze;
+
+    void Start()
+    {
+        maze = GameObject.Find("MazeGenerator");
+    }
+
+    public void TakeDamage (float amount)
    {
         health -= amount;
         if(health <= 0f)
@@ -15,5 +21,6 @@ public class Enemy : MonoBehaviour
 
    void Die () {
         Destroy(gameObject);
-   }
+        maze.GetComponent<MazeGenerator>().enemydie();
+    }
 }

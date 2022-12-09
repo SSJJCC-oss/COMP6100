@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Maze_Runner/Assets/Animation.meta
 guid: c4332ab21edcc3f4c94379096ceb434c
 folderAsset: yes
 DefaultImporter:
+========
+guid: de1b681583b57824895f29a969561ea1
+PrefabImporter:
+>>>>>>>> 1e4360ad992b8991f4b86cffdcdcc5318066724e:Maze_Runner/Assets/Manager.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
