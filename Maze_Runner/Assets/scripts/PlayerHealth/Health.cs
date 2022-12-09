@@ -12,12 +12,14 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        //Retriving data of the UI slider
         slider = GetComponent<Slider>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Storing the health value within the slider every update
         float maxHealth = 100f;
         float fill = player.health / maxHealth;
         slider.value = fill;

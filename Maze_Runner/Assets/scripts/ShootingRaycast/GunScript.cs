@@ -26,24 +26,27 @@ public class GunScript : MonoBehaviour
 
     void Shoot()
     {
+        // Plays the audio and the muzzleflash
         muzzle.Play();
         gunAudio.Play();
-
-        RaycastHit hit;
         
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        //Storing information about what object gets hit using the ray
+        RaycastHit hitInfo;
+        
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, range))
         {
-            Debug.Log(hit.transform.name);
-            EnemyController enemy = hit.transform.GetComponent<EnemyController>();
+            EnemyController enemy = hitInfo.transform.GetComponent<EnemyController>();
             if (enemy != null) {
                 enemy.TakeDamage(damage);
             }
 
-            if(hit.rigidbody != null) {
-                hit.rigidbody.AddForce(-hit.normal * impactForce);
+            if(hitInfo.rigidbody != null) {
+                hitInfo.rigidbody.AddForce(-hitInfo.normal * impactForce);
             }
 
-            GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            //Instantiating the shot impact at the hit point
+            GameObject impact = Instantiate(impactEffect, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
+
             Destroy(impact, 2f);
         }
     }
