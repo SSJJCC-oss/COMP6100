@@ -4,10 +4,12 @@ public class Enemy : MonoBehaviour
 {
    public float health = 50f;
    private GameObject maze;
+   Animator animator;
 
     void Start()
     {
         maze = GameObject.Find("MazeGenerator");
+        animator = GetComponentInChildren<Animator>();
     }
 
     public void TakeDamage (float amount)
@@ -20,7 +22,8 @@ public class Enemy : MonoBehaviour
    }
 
    void Die () {
-        Destroy(gameObject);
+        animator.SetBool("Die", true);
+        Destroy(gameObject, 4);
         maze.GetComponent<MazeGenerator>().enemydie();
     }
 }
