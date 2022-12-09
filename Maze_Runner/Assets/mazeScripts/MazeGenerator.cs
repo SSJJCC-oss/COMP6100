@@ -10,8 +10,10 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] float nodeSize;
     public NavMeshSurface surface;
     public GameObject enemy;
-    public float spawnTime = 2;
-    private int enemyCount = 0;
+    public float spawnTime = 10;
+    public int enemyCount = 0;
+    public int maxEnemy = 12;
+
 
     private void Start()
     {
@@ -26,7 +28,7 @@ public class MazeGenerator : MonoBehaviour
     {
         gameObject.transform.position = new Vector3(21.9f, -1.2f, 22);
         surface.transform.position = new Vector3(21.9f, -2.7f, 22);
-
+        
     }
     private void GenerateMaze(Vector2Int size)
     {
@@ -257,27 +259,43 @@ public class MazeGenerator : MonoBehaviour
 
     IEnumerator spawning()
     {
-        
-        if(enemyCount < 12)
-        {
             //wait time to spawn
             yield return new WaitForSeconds(spawnTime);
             //instantiate zombies
-            Vector3 pos = new Vector3(29.25f, -1, 29.42f);
-            Instantiate(enemy, pos, Quaternion.identity);
-
-            Vector3 pos2 = new Vector3(2f, -1, 2f);
-            Instantiate(enemy, pos2, Quaternion.identity);
-
-            Vector3 pos3 = new Vector3(47f, -1, -7f);
-            Instantiate(enemy, pos3, Quaternion.identity);
-
-            Vector3 pos4 = new Vector3(-8f, -1, 48f);
-            Instantiate(enemy, pos4, Quaternion.identity);
-
-            enemyCount+=4;
+            if (enemyCount < maxEnemy)
+            {
+                Vector3 pos = new Vector3(29.25f, -1, 29.42f);
+                Instantiate(enemy, pos, Quaternion.identity);
+                enemyCount++;
+            }
+            if (enemyCount < maxEnemy)
+            {
+                Vector3 pos2 = new Vector3(2f, -1, 2f);
+                Instantiate(enemy, pos2, Quaternion.identity);
+                enemyCount++;
+            }
+            if (enemyCount < maxEnemy)
+            {
+                Vector3 pos3 = new Vector3(47f, -1, -7f);
+                Instantiate(enemy, pos3, Quaternion.identity);
+                enemyCount++;
+            }
+            if (enemyCount < maxEnemy)
+            {
+                Vector3 pos4 = new Vector3(-8f, -1, 48f);
+                Instantiate(enemy, pos4, Quaternion.identity);
+                enemyCount++;
+            }
             //call spawn again
             StartCoroutine("spawning");
+        }
+        
+
+    public void enemydie()
+    {
+        if (enemyCount > 0)
+        {
+            enemyCount--;
         }
     }
 }
