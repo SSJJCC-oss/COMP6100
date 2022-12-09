@@ -69,9 +69,7 @@ public class EnemyController : MonoBehaviour
    void Die () {
         //Uses the animation "Falling Back" that has been set using the animator and after 4 seconds destroys the dead zombie
         animator.SetBool("Die", true);
-    
         Destroy(gameObject, 4);
         maze.GetComponent<MazeGenerator>().enemydie();
-        
     }
 }

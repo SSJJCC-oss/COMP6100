@@ -11,7 +11,7 @@ public class MazeGenerator : MonoBehaviour
     public NavMeshSurface surface;
     public GameObject enemy;
     public float spawnTime = 10;
-    public int enemyCount = 0;
+    public List<GameObject> enemyList = new List<GameObject>();
     public int maxEnemy = 12;
 
 
@@ -262,30 +262,26 @@ public class MazeGenerator : MonoBehaviour
             //wait time to spawn
             yield return new WaitForSeconds(spawnTime);
             //instantiate zombies
-            if (enemyCount < maxEnemy)
+            if (enemyList.Count < maxEnemy)
             {
                 Vector3 pos = new Vector3(29.25f, -1, 29.42f);
-                Instantiate(enemy, pos, Quaternion.identity);
-                enemyCount++;
+                enemyList.Add(Instantiate(enemy, pos, Quaternion.identity));
             }
-            if (enemyCount < maxEnemy)
+            if (enemyList.Count < maxEnemy)
             {
                 Vector3 pos2 = new Vector3(2f, -1, 2f);
-                Instantiate(enemy, pos2, Quaternion.identity);
-                enemyCount++;
-            }
-            if (enemyCount < maxEnemy)
+            enemyList.Add(Instantiate(enemy, pos2, Quaternion.identity));
+        }
+            if (enemyList.Count < maxEnemy)
             {
                 Vector3 pos3 = new Vector3(47f, -1, -7f);
-                Instantiate(enemy, pos3, Quaternion.identity);
-                enemyCount++;
-            }
-            if (enemyCount < maxEnemy)
+            enemyList.Add(Instantiate(enemy, pos3, Quaternion.identity));
+        }
+            if (enemyList.Count < maxEnemy)
             {
                 Vector3 pos4 = new Vector3(-8f, -1, 48f);
-                Instantiate(enemy, pos4, Quaternion.identity);
-                enemyCount++;
-            }
+            enemyList.Add(Instantiate(enemy, pos4, Quaternion.identity));
+        }
             //call spawn again
             StartCoroutine("spawning");
         }
@@ -293,9 +289,10 @@ public class MazeGenerator : MonoBehaviour
 
     public void enemydie()
     {
-        if (enemyCount > 0)
+        if (enemyList.Count > 0)
         {
-            enemyCount--;
+            //remove all missing gameObjects from the list of enemies
+            enemyList.RemoveAll(enemy => enemy == null);
         }
     }
 }
