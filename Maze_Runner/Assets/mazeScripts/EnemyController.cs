@@ -7,12 +7,16 @@ public class EnemyController : MonoBehaviour
 {
     Transform target;
     NavMeshAgent agent;
+    Animator animator;
+    GameObject playerCamera;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerCamera = GameObject.Find("Player Camera");
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -24,9 +28,13 @@ public class EnemyController : MonoBehaviour
         if(distance <= agent.stoppingDistance)
         {
             //attack target
-
-            //face target
+            animator.SetBool("Attack", true);
+            playerCamera.GetComponent<PlayerHealth>().TakeDamage();
+            // face target
             FaceTarget();
+        }
+        else {
+            animator.SetBool("Attack", false);
         }
     }
 

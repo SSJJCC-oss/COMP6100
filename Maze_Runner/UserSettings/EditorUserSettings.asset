@@ -6,26 +6,19 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 005504575c0d0c0e5f565f24497409444e4f1d787c2d2562782c186ae4e3623a
+      value: 530104565505590b5d5e5c7240730f404647487a7c7876607d794d63b2b06468
       flags: 0
     RecentlyUsedSceneGuid-1:
-<<<<<<< HEAD:Maze_Runner2/UserSettings/EditorUserSettings.asset
-      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
-=======
-      value: 065055535d035c035e0b0977487b07444116492e297b71657e7e4f65e7b36c6b
+      value: 00090d575757585d5c5b5a2413270a44444e4d2f287827657e704d67b1e16d3d
       flags: 0
     RecentlyUsedSceneGuid-2:
-      value: 5a04010356540c0959585c7716205e44434e48297c2d23632e7b1c65e6b8603d
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 5354520501510c090c5c0d7349215d444115497b2d2d7666782c4e63bbe13561
-      flags: 0
-    RecentlyUsedSceneGuid-4:
       value: 0052050254050f035d0b097a49740a4440151b7f747973312c284b36b5e66061
       flags: 0
-    RecentlyUsedSceneGuid-5:
+    RecentlyUsedSceneGuid-3:
+      value: 5206025606545b590c0a59751375094410154d732a2b2469747a1e30b5e3643c
+      flags: 0
+    RecentlyUsedSceneGuid-4:
       value: 5250575554020a0c0c57547b4027074440154b787b7075657e7f4536b3b86668
->>>>>>> e298c019336c5dca731c30fc163c625e3ae7404a:Maze_Runner/UserSettings/EditorUserSettings.asset
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
@@ -35,7 +28,7 @@ EditorUserSettings:
   m_VCDebugCmd: 0
   m_VCDebugOut: 0
   m_SemanticMergeMode: 2
-  m_DesiredImportWorkerCount: 4
+  m_DesiredImportWorkerCount: 2
   m_StandbyImportWorkerCount: 2
   m_IdleImportWorkerShutdownDelay: 60000
   m_VCShowFailedCheckout: 1
