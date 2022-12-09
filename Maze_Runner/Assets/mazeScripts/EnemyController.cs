@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //set distance to player - enemy
         float distance = Vector3.Distance(target.position, transform.position);
         if(die != true){
             agent.SetDestination(target.position);
@@ -47,6 +48,7 @@ public class EnemyController : MonoBehaviour
 
     void FaceTarget()
     {
+        //get direction and turn enemy to face direction of player
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
