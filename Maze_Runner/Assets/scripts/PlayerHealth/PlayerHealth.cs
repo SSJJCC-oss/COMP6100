@@ -9,7 +9,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage ()
    {
+        //Decrements the health every second an individual zombie attacks
         health -= 1 * Time.deltaTime;  
+
         if(health <= 0f)
         {
             Die();
@@ -17,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
    }
 
    void Die () {
+        //Loads the scene that displays "GAME OVER"
         SceneManager.LoadScene(4);
    }
 

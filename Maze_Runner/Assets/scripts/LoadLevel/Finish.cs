@@ -16,6 +16,7 @@ public class Finish : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            //Activates the next level everytime the player reaches the portal
              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
